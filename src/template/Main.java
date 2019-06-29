@@ -19,7 +19,9 @@ public class Main {
         public void  Solve(int forTest,InputReader in, PrintWriter out) {
 
             int n;
-            if(forTest>0){
+            //if(forTest>0)
+            {
+
                 while(true)
                 {
                     try {
@@ -38,16 +40,6 @@ public class Main {
                         throw e;
                     }
                     
-                }
-            }else{
-                n = in.nextInt();
-                if (n <= 3)
-                    out.println("NO");
-                else {
-                    if (n % 2 == 0)
-                        out.println("YES");
-                    else
-                        out.println("NO");
                 }
             }
             
