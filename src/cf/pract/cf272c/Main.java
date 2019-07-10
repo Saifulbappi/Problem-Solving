@@ -1,8 +1,4 @@
-package template;
-
-/* package Example
 package cf.pract.cf272c;
-*/
 
 import java.io.BufferedReader;
 // import java.io.FileInputStream;
@@ -11,13 +7,25 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.PrintWriter;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 import java.util.StringTokenizer;
 
-/// SOLVED
+/// SOLVED ///
 
 public class Main {
 
+    
+
     static class Task {
+
 
         public Task() {
         }
@@ -25,17 +33,35 @@ public class Main {
         public void  Solve(int forTest,InputReader in, PrintWriter out) throws Exception {
 
            
+            //if(forTest>0)
+            {
 
                 while(true)
                 {
                     try {
-                        // Solve the problem
-                        String str = in.nextLine();
-
-                        if(str.length()>0){
-                            out.println(str);
+                        int arr[] = new int[(int) (1e5 + 4)];
+                        int n = in.nextInt();
+                        for (int i = 0; i < n ; i++) {
+                            arr[i] = in.nextInt();
                         }
-                        
+                        int m = in.nextInt();
+                        int wi[] = new int[(int)(1e5+4)];
+                        long hi[] = new long[(int)(1e5+4)];
+
+                        for (int i = 0; i < m; i++) {
+                            wi[i] = in.nextInt();
+                            hi[i] = in.nextLong();
+                        }
+                        long maxSofar = 1;
+
+                        for (int i = 0; i < m; i++) {
+
+                            long posHeight = Math.max(arr[wi[i]-1],maxSofar);
+                            out.println(posHeight);
+                            posHeight = posHeight + hi[i];
+                            maxSofar = posHeight;
+                            
+                        }
 
                     }
                     catch (Exception e) {
@@ -48,7 +74,7 @@ public class Main {
                     }
                     
                 }
-            
+            }
             
             
         }

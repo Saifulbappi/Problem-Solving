@@ -2,6 +2,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "cf.pract.cf272c.Main",
+            "projectName": "pogTemplate"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "cf.pract.cf519b.Main",
+            "projectName": "pogTemplate"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Main",
+            "request": "launch",
+            "mainClass": "cf.pract.cf427b.Main",
+            "projectName": "pogTemplate"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Main$Task",
             "request": "launch",
             "mainClass": "template.Main$Task",

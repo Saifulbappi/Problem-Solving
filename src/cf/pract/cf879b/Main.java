@@ -1,8 +1,4 @@
-package template;
-
-/* package Example
-package cf.pract.cf272c;
-*/
+package cf.pract.cf879b;
 
 import java.io.BufferedReader;
 // import java.io.FileInputStream;
@@ -11,13 +7,25 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.PrintWriter;
+import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 import java.util.StringTokenizer;
 
-/// SOLVED
+/// SOLVED ///
 
 public class Main {
 
+    
+
     static class Task {
+
 
         public Task() {
         }
@@ -25,17 +33,33 @@ public class Main {
         public void  Solve(int forTest,InputReader in, PrintWriter out) throws Exception {
 
            
+            //if(forTest>0)
+            {
 
                 while(true)
                 {
                     try {
-                        // Solve the problem
-                        String str = in.nextLine();
+                        long  n,k;
+                        long arr[] = new long[505];
 
-                        if(str.length()>0){
-                            out.println(str);
+                        n = in.nextLong();
+                        k = in.nextLong();
+
+                        for (int i = 0; i < n; i++) {
+                            arr[i] = in.nextLong();
                         }
-                        
+                        long res = arr[0];
+                        long sofar = 0;
+                        for (int i = 1; i < n; i++) {
+                            if(arr[i]>res){
+                                res = arr[i];
+                                sofar = 1;
+                            }else{
+                                sofar++;
+                                if(sofar==k)break;
+                            }
+                        }
+                        out.println(res);
 
                     }
                     catch (Exception e) {
@@ -48,7 +72,7 @@ public class Main {
                     }
                     
                 }
-            
+            }
             
             
         }

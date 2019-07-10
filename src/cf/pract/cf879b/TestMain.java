@@ -1,10 +1,4 @@
-
-/* package Example
-package cf.pract.cf272c;
-*/
-
-
-package template;
+package cf.pract.cf879b;
 
 import static org.junit.Assert.assertEquals;
 
@@ -15,25 +9,15 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.PrintWriter;
-
 import org.junit.Test;
-
-import template.Main.InputReader;
-import template.Main.Task;
-
-/* Example 
-import cf.pract.cf272c.Main.InputReader;
-import cf.pract.cf272c.Main.Task;
-*/
-
-
+import cf.pract.cf879b.Main.InputReader;
+import cf.pract.cf879b.Main.Task;
 
 
 
 public class TestMain {
 
-    final String dir = System.getProperty("user.dir")+"/src/"+"template/";
-    //Example final String dir = System.getProperty("user.dir")+"/src/"+"cf/pract/cf272c/";
+    final String dir = System.getProperty("user.dir")+"/src/"+"cf/pract/cf879b/";
     int perTestCaseOutPutLine = 1;
         
     @Test
@@ -49,10 +33,7 @@ public class TestMain {
         try {
             task.Solve(1,in, out);
         } catch (Exception e) {
-            if(!(e instanceof NullPointerException)){
-                throw e;
-            }
-            
+            //throw e;
             
         }finally{
             out.close();

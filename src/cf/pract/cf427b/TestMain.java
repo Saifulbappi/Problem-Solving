@@ -1,10 +1,4 @@
-
-/* package Example
-package cf.pract.cf272c;
-*/
-
-
-package template;
+package cf.pract.cf427b;
 
 import static org.junit.Assert.assertEquals;
 
@@ -15,26 +9,17 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.PrintWriter;
-
 import org.junit.Test;
 
-import template.Main.InputReader;
-import template.Main.Task;
 
-/* Example 
-import cf.pract.cf272c.Main.InputReader;
-import cf.pract.cf272c.Main.Task;
-*/
-
-
+import cf.pract.cf427b.Main.InputReader;
+import cf.pract.cf427b.Main.Task;
 
 
 
 public class TestMain {
 
-    final String dir = System.getProperty("user.dir")+"/src/"+"template/";
-    //Example final String dir = System.getProperty("user.dir")+"/src/"+"cf/pract/cf272c/";
-    int perTestCaseOutPutLine = 1;
+    final String dir = System.getProperty("user.dir")+"/src/"+"cf/pract/cf427b/";
         
     @Test
     public void testTask() throws Exception{
@@ -49,10 +34,7 @@ public class TestMain {
         try {
             task.Solve(1,in, out);
         } catch (Exception e) {
-            if(!(e instanceof NullPointerException)){
-                throw e;
-            }
-            
+            //throw e;
             
         }finally{
             out.close();
@@ -78,25 +60,14 @@ public class TestMain {
         String solved;
         String testCaseIn;
         int testcase = 0;
-        int outputLine = 0;
         try{
 
             while(
                 ((expected = expectedReader.readLine()) !=null && expected.length()>0)
+                && ((solved = solvedReader.readLine()) !=null && solved.length()>0)
+                //&& ((testCaseIn = in.readLine()) !=null && testCaseIn.length()>0)
             ){
-                outputLine++;
-                if(outputLine==perTestCaseOutPutLine){
-                    outputLine = 0;
-                    ++testcase;
-                }
-                if((solved = solvedReader.readLine()) !=null && solved.length()>0){
-
-                    assertEquals("test case "+testcase+" ",expected, solved);
-                }else{
-                    
-                    assertEquals("OutputNotFound for test case =>"+testcase, expected,"");
-                }
-                
+                assertEquals("test case "+(++testcase)+" ",expected, solved);
     
             }
         }finally{
