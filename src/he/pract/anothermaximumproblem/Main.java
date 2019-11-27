@@ -97,10 +97,6 @@ public class Main {
                             long res;
                             res = (left* right) + left + right +1;
                             
-                            
-                           
-                            
-                            
                             if(hmpres.get(a[i])==null){
                                 hmpres.put(a[i], new Pair(res, i));
                             }else{

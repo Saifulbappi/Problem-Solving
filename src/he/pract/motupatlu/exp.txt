@@ -1,0 +1,6 @@
+4 1
+Motu
+1 3
+Patlu
+3 2
+Motu

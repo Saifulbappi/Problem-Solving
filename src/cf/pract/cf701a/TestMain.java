@@ -4,7 +4,7 @@ package cf.pract.cf272c;
 */
 
 
-package template;
+package cf.pract.cf701a;
 
 import static org.junit.Assert.assertEquals;
 
@@ -18,8 +18,8 @@ import java.io.PrintWriter;
 
 import org.junit.Test;
 
-import template.Main.InputReader;
-import template.Main.Task;
+import cf.pract.cf701a.Main.InputReader;
+import cf.pract.cf701a.Main.Task;
 
 /* Example 
 import cf.pract.cf272c.Main.InputReader;
@@ -32,7 +32,7 @@ import cf.pract.cf272c.Main.Task;
 
 public class TestMain {
 
-    final String projPath = "template";
+    final String projPath = "cf/pract/cf701a/";
     final String dir = System.getProperty("user.dir")+"/src/"+projPath;
     //Example final String dir = System.getProperty("user.dir")+"/src/"+"cf/pract/cf272c/";
     int perTestCaseOutPutLine = 1;
